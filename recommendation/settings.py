@@ -25,9 +25,6 @@ project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 dotenv_path = os.path.join(project_root, dotenv_files.get(ENVIRONMENT))
 load_dotenv(dotenv_path)
 
-print("Environment:", ENVIRONMENT)
-print("Database Host:", os.getenv("DB_HOST"))
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -47,6 +44,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    "movies.apps.MoviesConfig",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
